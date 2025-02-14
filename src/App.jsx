@@ -1,9 +1,15 @@
 import { useState } from 'react'
+
+import Section from './Section.jsx'
+import Modal from './Modal.jsx'
+import Auth from './Auth.jsx'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import CardHi from './CardHi'
+// Import My Custom Components
+import { Button, Input } from 'vite-components'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,7 +37,16 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-      <CardHi name="Ben" />
+      <Modal trigger={<h1>Open Modal from H1</h1>}>
+        Hello world
+      </Modal>
+
+        <Input placeholder="Input" />
+        <Button>Button</Button>
+
+      <Auth />
+
+      <Section />
     </>
   )
 }
